@@ -8,7 +8,7 @@ function DemoPage() {
   e.preventDefault();
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/demo", {
+    const response = await fetch("https://snapshare-backend-r37w.onrender.com/demo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
