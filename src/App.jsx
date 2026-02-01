@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "./src/Home";
+import Home from "./home";
 import DemoPage from "./components/DemoPage";
 
 function App() {
   return (
     <Router>
-      {/* Demo button stays global */}
+      
       <button
         className="demo-btn"
-        onClick={() => window.location.href = "/demo"}
+        onClick={() => (window.location.href = "/demo")}
       >
         Get a demo <span className="arrow">→</span>
       </button>
@@ -19,7 +18,7 @@ function App() {
         <Route path="/demo" element={<DemoPage />} />
       </Routes>
     </Router>
-  );ls
+  );
 }
 
 export default App;
