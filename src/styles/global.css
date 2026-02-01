@@ -1,8 +1,15 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
-  background: #ffffff;
-  color: #000000;
-  font-family: Inter, system-ui, sans-serif;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* HERO */
@@ -115,8 +122,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-
+  
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
 }
+
 
 /* Wrapper controls rounding & clipping */
 .image-wrapper {
