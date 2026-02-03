@@ -369,3 +369,25 @@ body {
   font-size: 20px;
   color: #444;
 }
+.hero-cta {
+  margin-top: 32px;
+  margin-left: 6px;
+
+  font-family: "EB Garamond", serif;
+  font-size: clamp(35px, 2.2vw, 24px);
+  font-weight: 400;
+  color: #444;
+
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.hero-cta span {
+  color: #6b7cff;
+  font-weight: 500;
+}
+
+.hero-cta:hover {
+  transform: translateX(4px);
+  color: #000;
+}
