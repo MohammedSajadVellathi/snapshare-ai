@@ -13,11 +13,7 @@ function Hero() {
         Instant AI Photo Delivery for Events and Photographers using {" "}
         <span className="highlight-text animate-highlight">AI Facial Recognition.</span>
       </p>
-      <p className="hero-cta">
-        onClick={() => window.location.href = "/demo"}
-        Try our demo — and become a <span>SnapShare fan ✨</span>
-      </p>
-
+      
       <button className="demo-btn">
         Get a demo <span className="arrow">→</span>
       </button>
