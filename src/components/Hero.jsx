@@ -20,7 +20,7 @@ function Hero() {
 
       <div className="hero-image">
         <div className="image-wrapper">
-          <img src={heroImage} alt="SnapShare visual" loading="lazy"/>
+          <img src={heroImage} alt="SnapShare visual"/>
         </div>
       </div>
     </section>
