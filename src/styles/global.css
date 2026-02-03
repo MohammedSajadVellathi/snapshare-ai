@@ -1,195 +1,135 @@
+/* ===== SAFE BASE ===== */
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'EB Garamond', serif;
+html {
+  font-size: 16px;
 }
 
 body {
+  margin: 0;
+  font-family: "EB Garamond", serif;
   overflow-x: hidden;
 }
 
-/* HERO */
+/* ===== HERO WRAPPER ===== */
 .hero {
-  min-height: 0.1vh;
-  padding: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Small top label */
+/* ===== HERO TITLE ===== */
 .hero-tag {
-  font-family: "EB Garamond", serif;
-  color: #000000;
   font-size: 26px;
-  letter-spacing: 0.050em;
-  font-weight: 2;
+  letter-spacing: 0.05em;
+  font-weight: 400;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  position: relative;
 }
 
-/* HERO TAG ANIMATION */
+/* entry animation */
 .animate-tag {
   opacity: 0;
-  transform: translateY(60px);
-  animation: fadeUp 1s ease-out forwards;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Hover micro-interaction */
-.hero-tag {
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.8s ease;
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
+/* hover underline */
 .hero-tag::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
-  width: 0%;
+  bottom: -6px;
+  width: 0;
   height: 2px;
-  background: #000000;
+  background: black;
   transition: width 0.3s ease;
-}
-
-.hero-tag:hover {
-  transform: translateY(-4px);
 }
 
 .hero-tag:hover::after {
   width: 100%;
 }
 
+/* ===== HERO TEXT ===== */
 .hero-subtext {
-  margin-top: 250px; 
-  margin-left: 10px; /* spacing below heading */
-  max-width: 1000px;       /* control line length */
-
-  font-family: "EB Garamond", serif;/* SAME font */
-  font-size: 80px;        /* 🔧 easy to change */
-  font-weight: 500;
-
+  max-width: 900px;
+  margin-top: 120px;
+  font-size: clamp(36px, 5vw, 64px);
   line-height: 1.2;
-  color: #000000;
-
-  text-align: center;       /* 🔧 change to center/right easily */
+  text-align: left;
+  color: #000;
 }
+
 .highlight-text {
-  color: #6b7cff; 
-  font-size:80px;       /* soft blue accent */
-  font-weight: 500;
+  color: #6b7cff;
 }
 
+/* floating highlight animation */
 .animate-highlight {
-  display: inline-block; /* REQUIRED for transform */
-  animation: floatFade 1.5s ease-in-out infinite;
+  display: inline-block;
+  animation: floatFade 2s ease-in-out infinite;
 }
 
 @keyframes floatFade {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-4px);
-    opacity: 0.85;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
 }
 
-/* HERO IMAGE */
+/* ===== HERO IMAGE ===== */
 .hero-image {
-  margin-top: -600px;
-  margin-left: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  
-  max-width: 100%;
-  height: auto;
-  border-radius: 24px;
+  margin-top: 80px;
+  align-self: flex-end;
 }
 
-
-/* Wrapper controls rounding & clipping */
 .image-wrapper {
   border-radius: 24px;
   overflow: hidden;
-  cursor: pointer;
 }
 
-/* Image itself */
 .image-wrapper img {
-  width: 500px;          /* match real image width */
+  width: 480px;
+  max-width: 100%;
   height: auto;
   display: block;
-
-  /* visual polish */
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-
-  /* hover animation */
-  transform: scale(1);
-  transition: transform 0.8s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease;
 }
 
-/* Zoom ONLY on hover */
 .image-wrapper:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .image-wrapper img {
-    transition: none;
-  }
-}
-
+/* ===== DEMO BUTTON ===== */
 .demo-btn {
   position: fixed;
-  top: 42px;
-  right: 80px;
-
-  background: #6fe3a2;     /* green tone */
-  color: #000000;
-
-  border: none;
+  top: 32px;
+  right: 48px;
+  padding: 12px 22px;
   border-radius: 999px;
-
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: 500;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
+  background: #6fe3a2;
+  border: none;
+  font-size: 16px;
   cursor: pointer;
   z-index: 1000;
-
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  gap: 8px;
 }
+
 .demo-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
+
 
 .demo-btn .arrow {
   transition: transform 0.25s ease;
