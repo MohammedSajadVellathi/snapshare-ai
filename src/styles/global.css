@@ -96,7 +96,8 @@ body {
 
 /* ===== HERO IMAGE ===== */
 .hero-image {
-  margin-top: 80px;
+
+  margin-top:-600px;
   align-self: flex-end;
 }
 
@@ -121,7 +122,7 @@ body {
 /* ===== DEMO BUTTON ===== */
 .demo-btn {
   position: fixed;
-  top: 32px;
+  top: 60px;
   right: 48px;
   padding: 12px 22px;
   border-radius: 999px;
@@ -370,14 +371,14 @@ body {
   font-size: 20px;
   color: #444;
 }
-
 .hero-cta {
-  margin-top: 32px;
+  margin-top: 180px;
   margin-left: 6px;
-
+  max-width: 640px;
+  line-height: 1.4;
   font-family: "EB Garamond", serif;
-  font-size: clamp(18px, 2.2vw, 24px);
-  font-weight: 400;
+  font-size: clamp(44px,3.2vw, 70px);
+  font-weight: 200;
   color: #444;
 
   cursor: pointer;

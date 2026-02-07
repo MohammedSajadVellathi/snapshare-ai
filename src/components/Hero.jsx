@@ -15,7 +15,9 @@ function Hero() {
       </p>
 
       <p className="hero-cta">
-      Try our demo — and become a <span>SnapShare fan ✨</span>
+      Try our demo — and become a
+       <span>SnapShare fan</span>
+       {". "}we can give you the best photo of all time
       </p>
 
       
